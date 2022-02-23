@@ -56,3 +56,5 @@ vrrp_instance VI_1 {
 EOF
 systemctl restart keepalived
 ```
+
+## NGINX Load Balancer for dns|ntp|http|https
