@@ -6,7 +6,7 @@ yum -y install keepalived
 systemctl enable keepalived
 cat << EOF > /etc/keepalived/keepalived.conf
 global_defs {
-   router_id SRV-1
+   router_id $HOSTNAME
 }
 
 vrrp_instance VI_1 {
@@ -34,7 +34,7 @@ yum -y install keepalived
 systemctl enable keepalived
 cat << EOF > /etc/keepalived/keepalived.conf
 global_defs {
-   router_id SRV-2
+   router_id $HOSTNAME
 }
 
 vrrp_instance VI_1 {
